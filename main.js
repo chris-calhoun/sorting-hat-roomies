@@ -22,4 +22,7 @@ const createForm = () => {
 renderToDom("containerForm", form);
 };
 
-createForm();
+const domEvents = () => {
+document.querySelector('#btnShowForm').addEventListener('click', createForm);
+}
+
