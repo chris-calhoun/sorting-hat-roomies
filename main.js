@@ -1,3 +1,5 @@
 'use strict';
 
-console.log('test');
+const domEvents = () => {
+document.querySelector('#btnShowForm').addEventListener('click', createForm);
+}
