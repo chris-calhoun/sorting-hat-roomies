@@ -67,8 +67,14 @@ const cardBuilder = () => {
 };
 
 //error placeholder
-const errorMessage = () => {
-  console.log('Please enter your name.');
-};
+const displayErrorMessage = () => {
+  const errorMessage = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                          <strong>Merlin's beard!</strong> How am I to sort ya without a name?!
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>`
+  renderToDom('containerErrorMessage', errorMessage);
+  }
 
 domEvents();
