@@ -1,3 +1,3 @@
 'use strict';
 
-console.log('test');
+document.querySelector('#btnShowForm').addEventListener('click', createForm)
