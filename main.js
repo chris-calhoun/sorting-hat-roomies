@@ -8,6 +8,9 @@ const domEvents = () => {
   document
     .querySelector('#containerForm')
     .addEventListener('click', displayCards);
+  document
+    .querySelector('#containerCards')
+    .addEventListener('click', expelStudent);
 };
 
 const renderToDom = (divId, textToPrint) => {
@@ -69,6 +72,15 @@ const cardBuilder = () => {
 //error placeholder
 const errorMessage = () => {
   console.log('Please enter your name.');
+};
+
+const expelStudent = e => {
+  const target = e.target.id;
+  const targetType = e.target.type;
+  if (targetType === 'button') {
+    studentsArray.splice(target, 1);
+    cardBuilder();
+  }
 };
 
 domEvents();
